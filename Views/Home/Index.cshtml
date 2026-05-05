@@ -1,8 +1,56 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<header>
+    <h1>Bienvenido a préstamos Gutierrez!</h1>
+</header>
+<body>
+    <section>
+    <h2>Datos Personales:</h2>
+    <form action= '@Url.Action("GuardarDatos", "Home")' method="POST">
+    Nombre completo: <input type="text" name="nombre">
+    <br /> <br />
+    Edad: <input type="number" name="edad">
+    <br /> <br />
+    DNI: <input type="number" name="DNI">
+    <br /> <br />
+    <br /> <br />
+    <h2>Situación laboral:</h2>
+    Trabaja actualmente? 
+    <br /> <br />
+    <input type="radio" name="SituacionActual" value="Si">Si
+    <br /> <br />
+    <input type="radio" name="SituacionActual" value="No">No
+    <br /> <br />
+    Tipo de empleo: 
+    <select name="tipoEmpleo">
+        <option value="1">Relación de dependencia</option>
+        <option value="2">Monotributista</option>
+        <option value="3">Autónomo</option>
+        <option value="4">Desempleado</option>
+    </select>
+    <br /> <br />
+    <br /> <br />
+    <h2>Información económica</h2>
+    Ingreso mensual: <input type="number" name="ingresoMensual">
+    <br /> <br />
+    Posee deudas? 
+    <br /> <br />
+    <input type="radio" name="deudasSiNo" value="Si">Si
+    <br /> <br />
+    <input type="radio" name="deudasSiNo" value="No">No
+    <br /> <br />
+    En caso de ser sí, ¿cuál/es?
+    <br /> <br />
+    <input type="checkbox" name="tarjeta">Tarjeta de crédito
+    <br /> <br />
+    <input type="checkbox" name="prestamo">Préstamo bancario
+    <br /> <br />
+    <input type="checkbox" name="prestamo">Préstamo informal
+    <br /> <br />
+    <br /> <br />
+    <h2>Condiciones del préstamo</h2>
+    Monto solicitado: <input type="number" name="montoSolicitado">
+    </form>
+    </section>
+</body>
