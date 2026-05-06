@@ -18,9 +18,9 @@
     <h2>Situación laboral:</h2>
     Trabaja actualmente? 
     <br /> <br />
-    <input type="radio" name="SituacionActual" value="Si">Si
+    <input type="radio" name="SituacionActual" value="Si"> Si
     <br /> <br />
-    <input type="radio" name="SituacionActual" value="No">No
+    <input type="radio" name="SituacionActual" value="No"> No
     <br /> <br />
     Tipo de empleo: 
     <select name="tipoEmpleo">
@@ -32,25 +32,38 @@
     <br /> <br />
     <br /> <br />
     <h2>Información económica</h2>
-    Ingreso mensual: <input type="number" name="ingresoMensual">
+    Ingreso mensual: <input type="number" name="ingresoMensual">$
     <br /> <br />
     Posee deudas? 
     <br /> <br />
-    <input type="radio" name="deudasSiNo" value="Si">Si
+    <input type="radio" name="deudasSiNo" value="Si"> Si
     <br /> <br />
-    <input type="radio" name="deudasSiNo" value="No">No
+    <input type="radio" name="deudasSiNo" value="No"> No
     <br /> <br />
     En caso de ser sí, ¿cuál/es?
     <br /> <br />
-    <input type="checkbox" name="tarjeta">Tarjeta de crédito
+    <input type="checkbox" name="tarjeta"> Tarjeta de crédito
     <br /> <br />
-    <input type="checkbox" name="prestamo">Préstamo bancario
+    <input type="checkbox" name="prestamo"> Préstamo bancario
     <br /> <br />
-    <input type="checkbox" name="prestamo">Préstamo informal
+    <input type="checkbox" name="prestamo"> Préstamo informal
     <br /> <br />
     <br /> <br />
     <h2>Condiciones del préstamo</h2>
-    Monto solicitado: <input type="number" name="montoSolicitado">
+    Monto solicitado: <input type="number" name="montoSolicitado">$
+    <br /> <br />
+    Plazo de devolución:
+    <select name="plazoDevolucion">
+        <option value="1">6 meses</option>
+        <option value="2">12 meses</option>
+        <option value="3">24 meses</option>
+    </select>
+    <br /> <br />
+    <br /> <br />
+    <h2>Confirmación</h2>
+    <input type="checkbox" name="acepta"> Acepta términos y condiciones
+    <br /> <br />
+    <input type="submit" value="ENVIAR">
     </form>
     </section>
 </body>
