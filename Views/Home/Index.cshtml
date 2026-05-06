@@ -2,12 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 <header>
-    <h1>Bienvenido a préstamos Gutierrez!</h1>
+    <h1>Bienvenido al banco!</h1>
 </header>
 <body>
     <section>
     <h2>Datos Personales:</h2>
-    <form action= '@Url.Action("GuardarDatos", "Home")' method="POST">
+    <form action= '@Url.Action("Prestamo", "Home")' method="POST">
     Nombre completo: <input type="text" name="nombre">
     <br /> <br />
     Edad: <input type="number" name="edad">
@@ -18,9 +18,9 @@
     <h2>Situación laboral:</h2>
     Trabaja actualmente? 
     <br /> <br />
-    <input type="radio" name="SituacionActual" value="Si"> Si
+    <input type="radio" name="trabaja" value="Si"> Si
     <br /> <br />
-    <input type="radio" name="SituacionActual" value="No"> No
+    <input type="radio" name="trabaja" value="No"> No
     <br /> <br />
     Tipo de empleo: 
     <select name="tipoEmpleo">
@@ -44,9 +44,9 @@
     <br /> <br />
     <input type="checkbox" name="tarjeta"> Tarjeta de crédito
     <br /> <br />
-    <input type="checkbox" name="prestamo"> Préstamo bancario
+    <input type="checkbox" name="prestamoBancario"> Préstamo bancario
     <br /> <br />
-    <input type="checkbox" name="prestamo"> Préstamo informal
+    <input type="checkbox" name="prestamoInformal"> Préstamo informal
     <br /> <br />
     <br /> <br />
     <h2>Condiciones del préstamo</h2>
