@@ -29,27 +29,12 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
+    [HttpPost]
     public IActionResult Prestamo(bool tarjeta, bool prestamoBancario, bool prestamoInformal, string tipoEmpleo, string nombre, int edad, string trabaja, int ingresoMensual, string deudasSiNo, int montoSolicitado, bool acepta)
     {
-        bool errores = false;
         bool aprobado = true;
         string mensaje = "";
-        if (edad < 18){
-            aprobado = false;
-        }
-        else if (trabaja == "No"){
-            aprobado = false;
-        }
-        else if (ingresoMensual<250000){
-            aprobado = false;
-        }
-        else if (deudasSiNo == "Si"){
-            aprobado = false;
-        }
-        else if (ingresoMensual*5 < montoSolicitado){
-            aprobado = false;
-        }
-        else if (acepta == false){
+        if (edad < 18 || trabaja == "No" || ingresoMensual<250000 || deudasSiNo == "Si" || ingresoMensual*5 > montoSolicitado || acepta == false){
             aprobado = false;
         }
         ViewBag.nombre = nombre;
